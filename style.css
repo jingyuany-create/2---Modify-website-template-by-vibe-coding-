@@ -1,0 +1,192 @@
+/* ===== Global base ===== */
+
+body {
+  font-family: "Yuyu", sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: #151515;
+
+  /* 印象派柔和背景渐变 */
+  background:
+    radial-gradient(circle at 10% 20%, rgba(255, 230, 200, 0.9) 0, transparent 55%),
+    radial-gradient(circle at 90% 15%, rgba(188, 214, 255, 0.8) 0, transparent 55%),
+    radial-gradient(circle at 20% 85%, rgba(188, 235, 210, 0.85) 0, transparent 55%),
+    radial-gradient(circle at 80% 80%, rgba(255, 206, 221, 0.8) 0, transparent 55%),
+    linear-gradient(135deg, #f6f2e8, #f3f0ea);
+  background-attachment: fixed;
+}
+
+/* ===== Header ===== */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(246, 243, 237, 0.88);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(180, 170, 150, 0.4);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+header .left {
+  color: #4e4a42;
+  font-weight: 600;
+}
+
+header .center {
+  font-weight: 500;
+  text-align: center;
+  /* 标题也用 Yuyu，让整体统一 */
+  font-family: "Yuyu", sans-serif;
+}
+
+header .center span {
+  display: block;
+  font-size: 14px;
+  text-transform: none;
+  letter-spacing: 0.05em;
+  color: #6d6a61;
+}
+
+header .right a {
+  color: #151515;
+  text-decoration: none;
+  font-weight: 400;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+header .right a:hover {
+  border-color: #3a5ba9;
+  color: #3a5ba9;
+}
+
+/* ===== Main card ===== */
+
+main {
+  max-width: 920px;
+  margin: 80px auto 96px auto;
+  padding: 32px 40px 40px 40px;
+
+  background-color: rgba(252, 250, 245, 0.96);
+  border-radius: 18px;
+  border: 1px solid rgba(210, 200, 180, 0.7);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.06),
+    0 0 0 1px rgba(255, 255, 255, 0.7);
+
+  line-height: 1.7;
+  font-size: 19px; /* 主内容基准字号稍微放大一点 */
+}
+
+/* ===== Titles & meta ===== */
+
+.project-meta {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #8b8476;
+  margin-bottom: 6px;
+}
+
+.project-title {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-bottom: 4px;
+}
+
+.project-subtitle {
+  font-size: 14px;
+  color: #59544a;
+  margin-bottom: 18px;
+}
+
+.advisor {
+  font-size: 14px;
+  margin-bottom: 26px;
+  color: #474136;
+}
+
+/* Section titles: editorial label feel */
+.section-title {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  margin-top: 36px;
+  margin-bottom: 10px;
+  color: #8b8476;
+}
+
+/* ===== Text ===== */
+
+p {
+  font-size: 18px;       /* 正文主文本字号在这里改：16px */
+  line-height: 1.8;
+  margin-bottom: 18px;
+  color: #262221;
+}
+
+/* 如果有 em，就保持斜体但仍用 Yuyu */
+em {
+  font-style: italic;
+}
+
+/* ===== Button & interactive area ===== */
+
+button {
+  background: linear-gradient(135deg, #3a5ba9, #f58fa6);
+  color: #fdfcf9;
+  border: none;
+  padding: 12px 26px;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border-radius: 999px;
+
+  box-shadow:
+    0 8px 18px rgba(0, 0, 0, 0.18),
+    0 0 0 1px rgba(255, 255, 255, 0.6);
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 12px 26px rgba(0, 0, 0, 0.22),
+    0 0 0 1px rgba(255, 255, 255, 0.9);
+  filter: brightness(1.02);
+}
+
+#messageDisplay {
+  font-size: 13px;
+  line-height: 1.6;
+  margin-top: 12px;
+  padding: 12px 14px;
+
+  border-radius: 10px;
+  border: 1px dashed rgba(184, 174, 160, 0.9);
+  background:
+    linear-gradient(135deg, rgba(244, 239, 229, 0.95), rgba(250, 246, 239, 0.95));
+  color: #342f2b;
+  min-height: 20px;
+}
